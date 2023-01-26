@@ -1,0 +1,39 @@
+<?php if($_GET['do'] === 'metamodel_mm_projekte'): ?>
+<!--    --><?//=  $this->data[0]['text']['projekt_name'] ?>
+<?php else : ?>
+
+    <?php if (count($this->data)): ?>
+        <div class="project">
+            <?php foreach ($this->data as $arrItem): ?>
+                <?php if($arrItem['raw']['aktiv'] === "1"): ?>
+                    <?php $this->block('item'); ?>
+                        <a class="project_box" href="<?= $arrItem['actions']['jumpTo']['href']; ?>">
+
+                                    <div class="project_image">
+                                        <img src="<?= $arrItem['text']['thumbnail']; ?>">
+                                    </div>
+                                    <div class="desc">
+                                        <p class="name"><?= $arrItem['text']['projekt_name']; ?></p>
+                                    </div>
+                                    <div class="desc">
+                                        <p><?= $arrItem['text']['ort']; ?></p>
+                                        <p><?= $arrItem['text']['bundesland']; ?></p>
+                                    </div>
+                        </a>
+                    <?php $this->endblock(); ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    <?php else : ?>
+        <?php $this->block('noItem'); ?>
+        <p class="info"><?= $this->noItemsMsg ?></p>
+        <?php $this->endblock(); ?>
+    <?php endif; ?>
+
+<?php endif; ?>
+
+
+<?php
+// Debug items.
+    //dump($this->data);
+?>

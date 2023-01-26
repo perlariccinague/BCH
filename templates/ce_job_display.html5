@@ -1,0 +1,13 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+    <?php if ($this->hasJob): ?>
+        <?php $this->insert('job_full', $this->job); ?>
+
+        <?php if ($this->json): ?>
+            <script type="application/ld+json"><?= $this->json ?></script>
+        <?php endif; ?>
+    <?php endif; ?>
+
+<?php $this->endblock(); ?>

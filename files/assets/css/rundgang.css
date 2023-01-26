@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+  .rundgang {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .rundgang iframe {
+    width:100%;
+    height: 200px;
+  }
+}

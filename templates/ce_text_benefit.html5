@@ -1,0 +1,32 @@
+<?php /*$this->extend('block_searchable'); */?>
+
+<div class="ce_text block benefits-box">
+
+  <?php $this->block('content'); ?>
+
+    <?php if (!$this->addBefore): ?>
+        <?= $this->text ?>
+    <?php endif; ?>
+
+    <?php if ($this->addImage): ?>
+      <?php $this->insert('image', $this->arrData); ?>
+    <?php endif; ?>
+
+  <!--  Headline Text-->
+  <!--<p><?/*= $this->headline; */?></p>-->
+
+
+  <!--  Detail Text -->
+    <?php if ($this->addBefore): ?>
+      <!--<div class="detail">-->
+        <?= $this->text ?>
+      <!--</div>-->
+    <?php endif; ?>
+
+
+
+</div>
+
+<?php /*$this->endblock(); */?>
+
+

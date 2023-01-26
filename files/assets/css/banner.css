@@ -1,0 +1,29 @@
+.partner {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background: #fff;
+  transition: bottom 250ms;
+  z-index: 10;
+  width: 100%;
+}
+
+.partner-removed {
+  bottom: -20%;
+}
+
+.btn-close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #f58221;
+}
+
+.partner-logos {
+  width: 40%;
+}
+

@@ -1,0 +1,9 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+  <?php $this->insert('image', $this->arrData); ?>
+
+  <div class="quad_2"></div>
+
+<?php $this->endblock(); ?>

@@ -1,0 +1,19 @@
+
+
+    <?php if (count($this->data)): ?>
+            <?php foreach ($this->data as $arrItem): ?>
+
+                    <?php $this->block('item'); ?>
+
+                        <?= $arrItem['text']['projekt_name'] ?>
+
+                    <?php $this->endblock(); ?>
+            <?php endforeach; ?>
+
+    <?php endif; ?>
+
+
+<?php
+// Debug items.
+//dump($this->data);
+?>

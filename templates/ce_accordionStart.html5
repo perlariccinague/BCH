@@ -1,0 +1,9 @@
+<section class="<?= $this->class ?> ce_accordion block akkordeon"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <div class="<?= $this->toggler ?>"<?php if ($this->headlineStyle): ?> style="<?= $this->headlineStyle ?>"<?php endif; ?>>
+    <span><?= $this->headline ?></span>
+    <img src="files/assets/icons/angle-right-solid.svg" class="icon_accord close">
+    <img src="files/assets/icons/angle-down-solid.svg" class="icon_accord open">
+  </div>
+
+  <div class="<?= $this->accordion ?>"><div>

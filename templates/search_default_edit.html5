@@ -1,0 +1,13 @@
+
+<div class="<?= $this->class ?>">
+    <a class="search-result-box" href="<?= $this->href ?>" title="<?= $this->title ?>">
+      <h3><?= $this->link ?></h3>
+
+      <?php if ($this->context): ?>
+        <p class="context"><?= $this->context ?></p>
+      <?php endif; ?>
+
+      <p class="url"><?= $this->url ?></p>
+
+    </a>
+</div>

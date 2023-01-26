@@ -1,0 +1,10 @@
+<div class="layout_short arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope
+     itemtype="http://schema.org/Article">
+
+    <div class="news_short_image_text_wrapper">
+
+        <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+        <h3 class="diversity">(m/w/d)</h3>
+
+    </div>
+</div>

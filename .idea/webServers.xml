@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="27091adf-6883-4946-9163-e13808fe81ee" name="server" url="http://bauconsult-hdf.de.w01afe41.kasserver.com">
+        <fileTransfer rootFolder="/contao" host="bauconsult-hdf.de.w01afe41.kasserver.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

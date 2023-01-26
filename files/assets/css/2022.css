@@ -1,0 +1,185 @@
+/* lato-regular - latin */@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lato-v23-latin-regular.eot'); /* IE9 Compat Modes */  src: local(''),
+       url('../fonts/lato-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */url('../fonts/lato-v23-latin-regular.woff') format('woff'), /* Modern Browsers */url('../fonts/lato-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */url('../fonts/lato-v23-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+/* lato-700 - latin */@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/lato-v23-latin-700.eot'); /* IE9 Compat Modes */  src: local(''),
+       url('../fonts/lato-v23-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Super Modern Browsers */url('../fonts/lato-v23-latin-700.woff') format('woff'), /* Modern Browsers */url('../fonts/lato-v23-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */url('../fonts/lato-v23-latin-700.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+#main .inside .mod_breadcrumb {
+	width: 1000px;
+	margin: 30px auto 70px auto;
+}
+
+body.bodyJobDetails .job-description {
+	margin-bottom: 0;
+}
+
+.widget.widget-explanation {
+	max-width: 1000px;
+	margin: 25px 0;
+	line-height: 1.5em;
+	font-weight: 300;
+}
+
+body.bodyJobDetails .ce_form {
+  width: 70%;
+}
+
+.bodyJobDetails .ce_form label {
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.ce_form select, .ce_form textarea, .ce_form input[type="text"], .ce_form input[type="email"], .ce_form input[type="tel"] {
+	height: auto;
+	color: black;
+	background-color: #F9F9F6;
+	border: 1px solid #ccc;
+	padding: 12px 16px;
+	outline: none;
+}
+
+.ce_form .widget-checkbox span {
+	display: block;
+}
+
+.ce_form .widget-checkbox span  a {
+	color: #b7db67;
+	transition: filter 250ms;
+}
+
+.ce_form .widget-checkbox span  a:hover {
+	filter: brightness(0.8);
+}
+
+.ce_form .widget-checkbox span input {
+	display: inline;
+}
+
+.checkbox_container {
+	padding: 0;
+}
+
+.link_button_2 a, .link_button_2 .submit, .widget-submit a, .widget-submit .submit, .ce_metamodels_frontendfilter a, .ce_metamodels_frontendfilter .submit {
+	background-color: #B7DB67;
+	border: 1px solid white;
+	border-radius: 3px;
+	color: white;
+	transition: border-color 250ms;
+}
+
+.bodyJobDetails .ce_form .widget.widget-submit .submit:hover {
+	border-color: #ccc;
+	color: white;
+}
+
+.bodyProjectDetail h2 {
+	font-size: 1.05rem;
+	margin-top: unset !important;
+	margin-bottom: 5px;
+}
+
+.bodyProjectDetail h2::before {
+	content: none;
+}
+
+.bodyProjectDetail #main .inside .mod_breadcrumb {
+  width: 800px;
+}
+
+#header .nav-wrapper .logo-wrapper {
+	align-items: center;
+}
+
+.nav-wrapper .logo-wrapper .logo.desktop a img {
+	width: 250px;
+}
+
+#main .ce_accordion p, #main .ce_accordion a {
+	font-size: 16px;
+}
+
+#main .toggler span {
+	font-size: 16px;
+}
+
+body.bodyJobDetails .mod_article .layout_full h2 {
+	padding: 0;
+	margin: 10px 0;
+	transform: none;
+	font-size: 18px;
+	text-align: left;
+}
+
+body.bodyJobDetails .mod_article .layout_full h2:before {
+	content: '';
+	width: 0;
+	margin-right: 0;
+}
+
+body.bodyLinktree #main .flexbox_wrapper {
+	justify-content: start;
+}
+
+body.bodyLinktree #main .ce_hyperlink {
+	width: auto;
+	margin: 0 10px;
+}
+
+body.kompetenzen #main h2 {
+	font-weight: 400;
+	text-transform: none;
+	font-size: 24px;
+	margin-bottom: 8px;
+}
+
+body.kompetenzen #main h2:before {
+	content: none;
+	width: 0;
+}
+
+@media screen and (max-width: 1265px) {
+	#header .nav-wrapper .logo-wrapper .logo a img {
+		width: 125px;
+	}
+	
+	.nav-wrapper .logo-wrapper .logo {
+		transform: translateY(-6px);
+	}
+}
+
+/* .mod_article.section_1, .mod_article.section_1_1, .mod_article.section_3 {
+	width: auto;
+	max-width: 1000px;
+}
+
+.mod_article.section_1 .flexbox_wrapper, .mod_article.section_1_1 .flexbox_wrapper, .mod_article.section_3 .flexbox_wrapper {
+	width: auto;
+}
+
+.mod_article.section_3 .flexbox_wrapper .flexbox_box {
+	width: auto;
+}
+
+.mod_article.section_3 .ce_image:first-child {
+	width: auto;
+	object-fit: cover;
+}
+
+.picture_1x1, .picture_1x1 img {
+	width: auto;
+	height: 100%;
+}
+
+.section_3 .ce_headline, .section_3 .ce_text, .section_3 .ce_hyperlink {
+	width: auto;
+} */

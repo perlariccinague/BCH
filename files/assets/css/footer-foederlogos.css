@@ -1,0 +1,24 @@
+.footer-foerderlogos {
+    display: flex;
+    background: white;
+    padding: 15px 0 0 25px;
+    box-sizing: border-box;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.footer-foerderlogos .ce_image {
+    width: 30%;
+}
+
+.footer-foerderlogos a img {
+    width: 100%;    
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1265px) {
+    .footer-foerderlogos {
+        width: 90%;
+        margin: 40px auto 0;
+    }
+}

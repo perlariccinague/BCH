@@ -1,0 +1,172 @@
+<?php
+    $point = null;
+?>
+
+<?php if($_GET['do'] === 'metamodel_mm_projekte'): ?>
+    <!--    --><?//=  $this->data[0]['text']['projekt_name'] ?>
+<?php else : ?>
+
+    <?php if (count($this->data)): ?>
+            <?php foreach ($this->data as $arrItem): ?>
+                <?php if($arrItem['raw']['aktiv'] === "1"): ?>
+                    <?php $this->block('item'); ?>
+
+                            <header id="header">
+                                <div class="inside">
+                                    {{insert_module::3}}
+                                    {{insert_module::10}}
+                                </div>
+                                <div class="mod_pageimage block">
+                                    <figure class="image_container">
+                                        <img src="<?= $arrItem['text']['seitenbild'] ?>">
+                                    </figure>
+                                </div>
+                            </header>
+
+                            <div id="container">
+                                <div id="main">
+                                    <div class="inside">
+                                        <!-- Breadcrumb -->
+                                        {{insert_module::4}}
+
+
+                                        <!-- Content -->
+                                        <div class="mod_article first block">
+                                            <h1 class="ce_headline"><?= $arrItem['text']['projekt_headline'] ?></h1>
+                                            <h2 class="ce_headline first"><?= $arrItem['text']['beschreibung_headline'] ?></h2>
+                                            <div class="ce_text block">
+                                                <?= $arrItem['text']['beschreibung_test'] ?>
+                                            </div>
+                                        </div>
+
+                                        <?php if($arrItem['raw']['leistungsumfang'][0][0]['value'] !== "" && $arrItem['raw']['leistungsumfang'][0][0]['value'] !== NULL): ?>
+                                        <div class="mod_article block">
+                                            <h2 class="ce_headline first">Leistungsumfang</h2>
+                                            <div class="ce_text last block">
+                                                <ul>
+                                                    <?php foreach ($arrItem['raw']['leistungsumfang'] as $point):  ?>
+                                                    <li><?= $point[0]['value']; ?></li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+
+
+                                        <!-- Sub-Infomations -->
+                                        <div class="sub_nav">
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icons/Icon_Germany.svg">
+                                                </div>
+                                                <div class="col_2">
+                                                    <p class="desc">Bundesland</p>
+                                                    <p class="info"><?= $arrItem['text']['bundesland'] ?></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icons/Icon_Location.svg">
+                                                </div>
+                                                <div class="col_2">
+                                                    <p class="desc">Ort</p>
+                                                    <p class="info"><?= $arrItem['text']['ort'] ?></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img src="files/assets/icons/Icon_Folder.svg">
+                                                </div>
+                                                <div class="col_2">
+                                                    <?php if($arrItem['raw']['kategorie'][0]['name'] !== ""): ?>
+                                                        <p class="desc">Kategorie</p>
+                                                        <?php foreach ($arrItem['raw']['kategorie'] as $cat):  ?>
+                                                            <p class="info"><?= $cat['name']; ?></p>
+                                                        <?php endforeach; ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+
+                                            <div class="sub_nav_box">
+                                                <div class="col_1">
+                                                    <img style="visibility: hidden" src="files/assets/icons/Icon_Folder.svg">
+                                                </div>
+                                                <div class="ce_hyperlink link_button_2 block">
+                                                    <a href="<?= $arrItem['text']['datenblatt'] ?>" class="hyperlink_txt" title="Download Datenblatt" download>
+                                                        <img src="files/assets/icons/download-solid.svg">
+                                                        <span>Datenblatt</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!--Content-->
+
+                                        <?php if($arrItem['raw']['slider_bilder']['path'][0] !== ""): ?>
+                                        <div class="mod_article block">
+                                            <div class="ce_sliderStart first block">
+                                                <div class="content-slider" data-config="0,300,0,1">
+                                                    <div class="slider-wrapper">
+                                                    <?php foreach($arrItem['raw']['slider_bilder']['path'] as $image): ?>
+                                                        <div class="ce_image block" data-index="0" style="left: 0px; transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                                                            <!-- <figure class="image_container">
+                                                                <img src="<?php // echo $image; ?>" itemprop="image">
+                                                            </figure> -->
+                                                            {{image::<?= $image ?>}}
+                                                        </div>
+                                                    <?php endforeach; ?>
+                                                    </div>
+                                                </div>
+                                                <nav class="slider-control">
+                                                    <a href="#" class="slider-prev"><img src="files/assets/icons/Pfeil_Links.svg"></a>
+                                                    <span class="slider-menu"></span>
+                                                    <a href="#" class="slider-next"><img src="files/assets/icons/Pfeil_Rechts.svg"></a>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <?php if($arrItem['text']['weitere_informationen'] !== ""): ?>
+                                        <div class="mod_article block">
+                                            <section class="ce_accordionStart first ce_accordion block akkordeon">
+                                                <div class="toggler">
+                                                    <span>Weitere Informationen </span>
+                                                    <img src="files/assets/icons/angle-right-solid.svg" class="icon_accord close">
+                                                    <img src="files/assets/icons/angle-down-solid.svg" class="icon_accord open">
+                                                </div>
+                                                <div class="accordion"><div>
+                                                        <div class="ce_text block">
+                                                            <?= $arrItem['text']['weitere_informationen'] ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <?php endif; ?>
+                                        <div class="space_60"></div>
+
+                                        <!-- Content ENDE -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                    <?php $this->endblock(); ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+    <?php else : ?>
+        <?php $this->block('noItem'); ?>
+        <p class="info"><?= $this->noItemsMsg ?></p>
+        <?php $this->endblock(); ?>
+    <?php endif; ?>
+
+<?php endif; ?>
+
+
+<?php
+// Debug items.
+//dump($this->data);
+?>

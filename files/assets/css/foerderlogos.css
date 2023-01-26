@@ -1,0 +1,20 @@
+.foerderlogos {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 230px;
+    padding: 35px 0 0px 35px;
+    box-sizing: border-box;
+    background: white;
+}
+
+.foerderlogos img {
+    width: 100%;
+}
+
+.foerderlogos img:first-child {
+    margin-bottom: 20px;
+}

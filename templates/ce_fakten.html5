@@ -1,0 +1,19 @@
+<?php
+
+?>
+<section class="fakten_wrapper">
+    <div class="fakten_row">
+        <div class="fakten ma">
+            <p class="counter value"><?= $this->faktenContentMitarbeiter ?></p>
+            <p class="desc">Mitarbeiter</p>
+        </div>
+       <div class="fakten year">
+           <p class="desc">Erfahrung seit</p>
+           <p class="value"><?= $this->faktenContentErfahrung ?></p>
+       </div>
+        <div class="fakten pro">
+            <p class="counter value"><?= $this->faktenContentProjekte ?></p>
+            <p class="desc">Projekte</p>
+        </div>
+    </div>
+</section>

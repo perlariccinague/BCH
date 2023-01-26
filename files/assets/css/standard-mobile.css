@@ -1,0 +1,119 @@
+@media screen and (max-width: 1265px) {
+    .project .project_box {
+        width: 29% !important;
+    }
+
+    .flexbox_wrapper.standorte {
+        display: flex !important;
+    }
+
+    .flexbox_wrapper.standorte .svg-graph {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mod_pageimage img {
+        height: auto !important;
+        margin-top: 105px;
+        max-height: 165px;
+    }
+    
+    body.pageimage_s .mod_pageimage {
+        height: auto;
+    }
+
+    .mod_article.section_5 {
+        position:relative;
+        top:initial;
+       }       
+
+    .mod_article.section_5 .ce_text p {
+        color: black;
+        margin-top: 20px;
+       }       
+
+    .ce_form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .project .project_box {
+        width: 100% !important;
+    }
+
+    .mod_article.section_5 {
+        top: initial !important;
+    }
+}
+
+body.bodyProjectDetail .sub_nav .sub_nav_box .ce_hyperlink {
+    width:unset;
+    display: none;
+}
+
+h1.ce_headline,h2.ce_headline {
+    max-width: 90%;
+}
+
+.load-more {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid black;
+    padding: 15px 60px;
+    font: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: color 250ms, border-color 250ms;
+}
+
+.load-more:hover {
+    color: #b7db67;
+    border-color: #b7db67;
+}
+
+.no-filter {
+    filter: none !important;
+}
+
+body.bodyProject .project .project_box.soon-more {
+    height: 303.33333333px;
+    background: #555;
+    color: white;
+    text-align: center;
+    padding: 140px 0 0 0;
+}
+
+#vue-filter {
+    width: 90%;
+    max-width: 1000px;
+}
+
+body.bodyProject .mod_breadcrumb,
+body.bodyProject .ce_headline {
+ max-width: 1000px;
+ width: 90% !important;
+}
+
+body.bodyAboutUs .mod_pageimage {
+    height: auto;
+}
+
+.mod_pageimage img {
+    height: auto !important;
+    max-height: 60vh;
+}
+
+.mod_breadcrumb {
+    margin-bottom: 40px !important;
+}
+
+.mod_article.section_5 {
+    top: -60vh;
+}
+
+body.ausbildung-studium .mod_pageimage img {
+    max-height: initial;
+}

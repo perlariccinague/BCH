@@ -1,0 +1,8 @@
+
+<section id="<?= $this->id ?>" class="<?= $this->class ?> flexbox_wrapper block"<?= $this->cssID ?>
+     style="
+             align-items: <?= $this->flexboxAusrichtungContent ?>;
+             justify-content: <?= $this->flexboxAusrichtungContentY ?>;
+             margin-top: <?= $this->flexboxAnfangContent ?>;
+             margin-bottom: <?= $this->flexboxEndeContent ?>;">
+

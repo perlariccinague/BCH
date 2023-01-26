@@ -1,0 +1,95 @@
+<!-- <pre><?php // echo $this->showTemplateVars(); ?> </pre> -->
+<h1 itemprop="name"><?= $this->newsHeadline ?> <span class="diversity">(m/w/d)</span></h1>
+<div class="layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+
+	<div class="ce_text block job-description" itemprop="description">
+	    <?php
+	        echo $this->teaser;
+	        $ortArray = unserialize($this->ort);
+	        $length = sizeof($ortArray);
+	        $x = 0;
+	    ?>
+	    <script>
+	    	const places = <?= json_encode($ortArray) ?>;
+	    </script>
+	
+	</div>
+	<h2><?= $this->headline ?> (m/w/d)</h2>
+    
+
+
+
+    <div class="flex-location">
+        <img class="location-icon" src="files/assets/icons/Icon_Location.svg">
+        <p>Am Standort
+            <?php foreach ($ortArray as $ort): ?>
+                <?= $ort ?>
+
+                <?php $x++;?>
+
+                    <?php if ($x === $length): ?>
+
+                    <?php else: ?>
+                    ,
+                    <?php endif; ?>
+
+            <?php endforeach; ?>
+        </p>
+    </div>
+
+<!--  <?php /*if ($this->hasMetaFields): */?>
+    <p class="info"><time datetime="<?/*= $this->datetime */?>" itemprop="datePublished"><?/*= $this->date */?></time> <?/*= $this->author */?> <?/*= $this->commentCount */?></p>
+  --><?php /*endif; */?>
+
+  <?php if ($this->hasSubHeadline): ?>
+    <h2 itemprop="headline"><?= $this->subHeadline ?></h2>
+  <?php endif; ?>
+
+    <div class="job-detail-module">
+
+        <div class="job-details">
+
+          <?php if ($this->hasText): ?>
+            <?= $this->text ?>
+          <?php else: ?>
+            <div class="ce_text block">
+              <?php if (!$this->addBefore): ?>
+                <?= $this->teaser ?>
+              <?php endif; ?>
+
+              <?php if ($this->addImage): ?>
+                <?php $this->insert('image', $this->arrData); ?>
+              <?php endif; ?>
+
+              <?php if ($this->addBefore): ?>
+                <?= $this->teaser ?>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+
+        </div>
+
+        <div class="benefits-wrapper">
+            <div class="benefits">
+                {{insert_article::126}}
+            </div>
+
+<!--            <div class="benefits-detail">
+                <div id="benfits-text"></div>
+            </div>-->
+
+        </div>
+
+    </div>
+
+  <?php if ($this->enclosure): ?>
+    <ul class="enclosure">
+      <?php foreach ($this->enclosure as $enclosure): ?>
+        <li class="download-element ext-<?= $enclosure['extension'] ?>">
+          <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  <?php endif; ?>
+
+</div>

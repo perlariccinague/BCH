@@ -1,0 +1,32 @@
+.jobs-list .layout_short {
+    width: 90%;
+    max-width: initial;
+    padding: 20px 0;
+}
+
+.jobs-list .layout_short:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.jobs-list .layout_short h2 {
+    margin-top: 0;
+}
+
+
+.mod_article_benefits .benefits-box {
+    display: block;
+    width: 21%;
+}
+
+.mod_article_benefits .benefits-box p {
+    text-align: center;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.mod_article_benefits .benefits-box figure.image_container img {
+    margin: 0 auto;
+}
+   
